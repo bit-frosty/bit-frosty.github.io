@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subdomain Takeover</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+        body {
+            background-color: black;
+            color: #00ff00;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            padding-top: 5%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 80px;
+            text-transform: uppercase;
+            position: relative;
+            animation: glitch 1s infinite;
+        }
+
+        p {
+            font-size: 28px;
+        }
+
+        .message {
+            font-size: 36px;
+            color: #ff0000;
+            margin-top: 20px;
+        }
+
+        .byline {
+            margin-top: 20px;
+            font-size: 22px;
+            color: #5eff00;
+        }
+
+        .sub {
+            font-size: 20px;
+            color: rgb(0, 255, 221);
+            margin-top: 50px;
+        }
+
+        /* Style for the bug image */
+        .bug {
+            margin-bottom: 30px;
+            width: 300px; /* Increased size */
+            height: auto; /* Maintain aspect ratio */
+            filter: invert(1); /* Invert colors */
+        }
+
+        @keyframes glitch {
+            0% {
+                text-shadow: 2px 2px 1px #ff00ff, -2px -2px 1px #00ffff;
+                transform: translate(0);
+            }
+            25% {
+                text-shadow: -2px -2px 1px #ff00ff, 2px 2px 1px #00ffff;
+                transform: translate(2px, -2px);
+            }
+            50% {
+                text-shadow: 2px -2px 1px #ff00ff, -2px 2px 1px #00ffff;
+                transform: translate(-2px, 2px);
+            }
+            75% {
+                text-shadow: -2px 2px 1px #ff00ff, 2px -2px 1px #00ffff;
+                transform: translate(2px, 2px);
+            }
+            100% {
+                text-shadow: 2px 2px 1px #ff00ff, -2px -2px 1px #00ffff;
+                transform: translate(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Bug Image with increased size and inverted color -->
+    <img src="https://clipart-library.com/images/dT45GppGc.png" alt="Bug Image" class="bug">
+
+    <h1>Subdomain Takeover</h1>
+    <p class="message">by frosty</p>
+
+    <div class="byline">This subdomain is vulnerable to takeover.</div>
+
+    <div class="sub">This is a just a POC, Please secure it immediately to avoid misuse.</div>
+</body>
+</html>
